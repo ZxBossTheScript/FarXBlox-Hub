@@ -1,41 +1,111 @@
-# Compiled Lua sources
-luac.out
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
+local PhantomForcesWindow = Library:NewWindow("FREE UGC SPINNER")
 
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
 
-# Precompiled Headers
-*.gch
-*.pch
+KillingCheats:CreateToggle("Auto Spin", function(value)
+_G.name = value
+while _G.name == true do
+_G.Lol = true
+while _G.Lol == true do
+game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+wait(0.4) 
+end
+wait(5) 
+end
+end) 
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
+KillingCheats:CreateToggle("Inf Spin", function(value)
+_G.name = value
+while _G.name == true do
+while task.wait(0.4) do game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+end
+wait(5) 
+end
+end) 
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+KillingCheats:CreateButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+KillingCheats:CreateButton("Anti AFK", function()
+while not game:IsLoaded() do wait() end
+repeat wait() until game.Players.LocalPlayer.Character
+Players = game:GetService("Players")
+local GC = getconnections or get_signal_cons
+if GC then
+	for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+		if v["Disable"] then v["Disable"](v)
+		elseif v["Disconnect"] then v["Disconnect"](v)
+		end
+	end
+else
+  Players.LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+  end)
+end
+game.StarterGui:SetCore('SendNotification', { Title = 'on'; Text = 'Anti-AFK activated!'; })
+end)
 
+local KillingCheats = PhantomForcesWindow:NewSection("Credits")
+
+KillingCheats:CreateButton("@FarXBloxScript ", function()
+print("Love God because he loves you")
+end)local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("FREE UGC SPINNER")
+
+local KillingCheats = PhantomForcesWindow:NewSection("Main")
+
+KillingCheats:CreateToggle("Auto Spin", function(value)
+_G.name = value
+while _G.name == true do
+_G.Lol = true
+while _G.Lol == true do
+game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+wait(0.4) 
+end
+wait(5) 
+end
+end) 
+
+KillingCheats:CreateToggle("Inf Spin", function(value)
+_G.name = value
+while _G.name == true do
+while task.wait(0.4) do game:GetService("ReplicatedStorage"):WaitForChild("remotes"):WaitForChild("startspin"):FireServer()
+end
+wait(5) 
+end
+end) 
+
+KillingCheats:CreateButton("Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+KillingCheats:CreateButton("Anti AFK", function()
+while not game:IsLoaded() do wait() end
+repeat wait() until game.Players.LocalPlayer.Character
+Players = game:GetService("Players")
+local GC = getconnections or get_signal_cons
+if GC then
+	for i,v in pairs(GC(Players.LocalPlayer.Idled)) do
+		if v["Disable"] then v["Disable"](v)
+		elseif v["Disconnect"] then v["Disconnect"](v)
+		end
+	end
+else
+  Players.LocalPlayer.Idled:Connect(function()
+    VirtualUser:CaptureController()
+    VirtualUser:ClickButton2(Vector2.new())
+  end)
+end
+game.StarterGui:SetCore('SendNotification', { Title = 'on'; Text = 'Anti-AFK activated!'; })
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Credits")
+
+KillingCheats:CreateButton("@FarXBloxScript ", function()
+print("Love God because he loves you")
+end)
