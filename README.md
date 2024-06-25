@@ -1,2 +1,1 @@
-# FarXBlox-Hub
-Script
+free ugc spinner
